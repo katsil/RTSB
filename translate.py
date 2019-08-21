@@ -4,7 +4,7 @@ def translate(bot, update):
   # part with token
   key = '?key=' + config.TRANSLATE_TOKEN
   # part with text from user (all message without '/tr')
-  toTranslate = '&text=' + tool.getCore(update, 'tr')
+  toTranslate = '&text=' + tool.getCore(update, 'translate')
   # url for checking language of text
   urlCheck = 'https://translate.yandex.net/api/v1.5/tr.json/detect'
   urlCheck += key + toTranslate
