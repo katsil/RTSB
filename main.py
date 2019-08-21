@@ -31,9 +31,12 @@ Example: /translate test
 /weather - ask about your umbrella for tomorrow. Choose your city
 /reg - register a new user by name
 /login - login as existing user by name
-Example: /login test1'''
+Example: /login test1
+/exchange - request an exchange rate for today
+'''
   tool.sendTextBack(text, update, bot)
 
+# for future 
 def test(bot: Bot, update: Update):
   pass
   
@@ -48,12 +51,12 @@ def main():
   )
 
   H_common=MessageHandler(Filters.all, commonMessage)
-  H_tr=CommandHandler("tr", translateCall)
+  H_tr=CаommandHandler("translate", translateCall)
   H_reg=CommandHandler("reg", regCall)
   H_login=CommandHandler("login", loginCall)
   H_weather=CommandHandler("weather", weatherCall)
   H_help=CommandHandler("help", helpCall)
-  H_exchange=CommandHandler("e", exchangeCall)
+  H_exchange=CommandHandler("exchange", exchangeCall)
   H_test=CommandHandler("t", test)
 
   updater.dispatcher.add_handler(H_tr)
