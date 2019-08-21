@@ -51,7 +51,7 @@ def main():
   )
 
   H_common=MessageHandler(Filters.all, commonMessage)
-  H_tr=CаommandHandler("translate", translateCall)
+  H_tr=CommandHandler("translate", translateCall)
   H_reg=CommandHandler("reg", regCall)
   H_login=CommandHandler("login", loginCall)
   H_weather=CommandHandler("weather", weatherCall)
